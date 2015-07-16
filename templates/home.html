@@ -2,12 +2,26 @@
 	<head>
 	</head>
 	<body>
-		<form action="/go">
+		<form id="f1" action="/go">
 		<center>
 			<h3>Permutation of Any String</h3>
-			<input type="text" name="t1" placeholder="Enter Any String"><br />
-			<input type="submit" value="Result">
+			<input type="text" id="st" name="t1" placeholder="Enter Any String"><br />
+			<input type="button" value="Result" onclick="func()">
 		</center>
 		</form>
+		<script>
+			function func(){
+				var temp=document.getElementById("st").value;
+				if(temp.length<2){
+					alert("String Length Should Be Greater Than 1");
+					document.getElementById("f1").reset();
+					document.getElementById("st").focus();
+				}
+				else{
+					document.getElementById("f1").submit();
+				}
+			}
+		</script>	
 	</body>
 </html>
+
