@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	</head>
+	<body>
+		<center>
+		<h1>All Combinations are Given Below</h1>
+		<h3>
+		<div id="d1">
+		</div>
+		</h3>
+		</center>
+		<script>
+			$(document).ready(function(){
+				var final_data={{ res|safe }};
+				for(i=0;i<final_data.length;i++){
+				document.getElementById("d1").innerHTML = document.getElementById("d1").innerHTML +"<br>"+ final_data[i];
+			}
+			});
+		</script>
+	</body>	
+</html>
